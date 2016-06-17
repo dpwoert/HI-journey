@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "d3": "*",
-    "dat.gui": "*"
+    "dat.gui": "*",
+    "turfjs": "*"
   }
 }

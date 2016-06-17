@@ -83,11 +83,14 @@
 
 		var id = THREE.Math.generateUUID();
 		var points = [];
+		var geos = [];
 		var curves = [];
 		var meshes = [];
 		var labels = [];
 		var useTracking = false;
 		var trackSpeed = 0;
+
+		var range = d3.scale.linear().domain([10, 15000]).range([1.1, 1.8])
 
 		var getPrevious = function(){
 			if(points.length > 0){
@@ -104,12 +107,22 @@
 			var previous = getPrevious();
 			var point = tools.degreeToVec3(lat, lon, 0.35, world.radius);
 			points.push(point);
+			geos.push([lat, lon]);
 
 			//curve to somewhere
-			if(curveHeight){
+			if(curveHeight && geos.length > 1){
 
-				var center = previous.clone().lerp(point, 0.5);
-				center = new THREE.Vector3(0,0,0).lerp(center, 1 + (curveHeight/10));
+				var start = geos[geos.length - 2];
+
+				start = turf.point(start);
+				end = turf.point([lat, lon]);
+				var center = turf.midpoint(start, end);
+				var distance = turf.distance(start, end);
+				center = tools.degreeToVec3(center.geometry.coordinates[0], center.geometry.coordinates[1], 0.35, world.radius);
+				center = new THREE.Vector3().lerp(center, range(distance));
+
+				// var center = previous.clone().lerp(point, 0.5);
+				// center = new THREE.Vector3(0,0,0).lerp(center, 1 + (curveHeight/10));
 
 				var curve = new THREE.QuadraticBezierCurve3(previous, center, point);
 				curves.push(curve);
@@ -172,7 +185,6 @@
 				//create line
 				var line = new THREE.MeshLine();
 				line.setGeometry( geometry );
-				console.log(type, materials)
 				var mesh = new THREE.Mesh( line.geometry, materials[type].line );
 				meshes.push(mesh);
 				world.rotated.add(mesh);

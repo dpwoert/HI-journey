@@ -188,9 +188,6 @@ window.World = function(canvas){
 		this.camera.aspect = width / height;
 		this.camera.updateProjectionMatrix();
 
-		//update timeline
-		timeline.resize();
-
 	}.bind(this));
 
 };
