@@ -66,7 +66,6 @@ gulp.task('browserSync', () => {
 			routes: {
 				"/styles": "./dist/styles",
 				"/js": "./dist/js"
-				"/data": "./data"
 			},
 			middleware: [ historyApiFallback() ]
 		}

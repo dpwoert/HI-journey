@@ -106,6 +106,53 @@ window.World = function(canvas){
 
 	}.bind(this));
 
+	var world = this;
+
+	d3
+		.csv('data/hyper.csv')
+		.row(function(d) {
+
+			var parseLocation = function(location){
+				return location.map((spot) => {
+					const split = spot.split('|');
+					return {
+						'lat': parseFloat(split[0]),
+						'lon': parseFloat(split[1]),
+						'city': split[2]
+					};
+				});
+			}
+
+			d['before_hyper'] = d['before_hyper'].replace(', ',',');
+			// d['after_hyper'] = d['after_hyper'].replace(', ',',');
+			d.before = d['before_hyper'].split(',');
+			// d.after = d['after_hyper'].split(',');
+
+			d.before = parseLocation(d.before);
+			// parseLocation(d.after);
+
+			return d;
+		})
+		.get(function(error, rows) {
+
+			console.log(rows);
+
+			rows.forEach((person) => {
+
+				route = new Route(world);
+
+				person.before.forEach((spot) => {
+					route.add(spot.lat, spot.lon, 1, spot.city);
+				});
+
+				route.add(53.480759, -2.242631, 1, 'Manchester');
+				route.build('before');
+
+
+			});
+
+		});
+
 	//add controls
 	var controls = new THREE.OrbitControls( this.camera, renderer.domElement );
 	controls.enableDamping = true;

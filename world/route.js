@@ -1,5 +1,16 @@
 (function(){
 
+	var colors = {
+		'after': new THREE.Color(0xff0000),
+		'before': new THREE.Color(0x15D2B6),
+	};
+
+	var safeList = [
+		'Manchester',
+		'Sao Paolo',
+		'Berlin'
+	]
+
 	var createLabel = function(label, position){
 
 		var fontface = 'Helvetica neue';
@@ -48,9 +59,9 @@
 	};
 
 	var materials = {};
-	for(var type in window.colors) {
+	for(var type in colors) {
 
-		var color = window.colors[type];
+		var color = colors[type];
 		materials[type] = {};
 
 		materials[type].line = new THREE.MeshLineMaterial({
@@ -105,7 +116,7 @@
 			}
 
 			//label
-			if(label){
+			if(label && safeList.indexOf(label) > -1){
 
 				labelOffset = labelOffset || 0.1;
 
@@ -126,7 +137,7 @@
 			var point = tools.degreeToVec3(lat, lon, 0.35, world.radius);
 			points.push( point );
 
-			if(label){
+			if(label && safeList.indexOf(label) > -1){
 
 				labelOffset = labelOffset || 0.1;
 
@@ -161,7 +172,7 @@
 				//create line
 				var line = new THREE.MeshLine();
 				line.setGeometry( geometry );
-
+				console.log(type, materials)
 				var mesh = new THREE.Mesh( line.geometry, materials[type].line );
 				meshes.push(mesh);
 				world.rotated.add(mesh);
