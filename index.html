@@ -30,6 +30,19 @@
 
 		<!-- build:js js/lib.js -->
 		<script src="bower_components/d3/d3.min.js"></script>
+		<script src="bower_components/threejs/build/three.js"></script>
+
+		<script src="lib/pipeline/process-step.js"></script>
+		<script src="lib/pipeline/render-step.js"></script>
+		<script src="lib/pipeline/shader-step.js"></script>
+		<script src="lib/pipeline/render-pipeline.js"></script>
+		<script src="lib/destroy.js"></script>
+		<script src="lib/mesh-line.js"></script>
+		<script src="lib/controls.js"></script>
+
+		<script src="world/tools.js"></script>
+		<script src="world/route.js"></script>
+		<script src="world/world.js"></script>
 		<!-- endbuild -->
 
 		<!-- Google Analytics code -->
@@ -39,8 +52,99 @@
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-77109795-3', 'auto');
+			ga('create', 'UA-XXXXXXXXX', 'auto');
 			ga('send', 'pageview');
+		</script>
+
+		<!-- shader - simple vertex shader -->
+		<script id="copyVertex" type="x-shader/x-vertex">
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vUv = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+		<!-- shader - copy/save to screen -->
+		<script id="copyFragment" type="x-shader/x-vertex">
+
+			uniform sampler2D texData;
+			varying vec2 vUv;
+
+			void main() {
+
+				vec4 texel = texture2D( texData, vUv );
+				gl_FragColor = 1.0 * texel;
+
+			}
+
+		</script>
+
+		<script id="tiltHoriFragment" type="x-shader/x-fragment">
+
+			uniform sampler2D texData;
+			uniform float h;
+			uniform float r;
+			uniform float spread;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vec4 sum = vec4( 0.0 );
+
+				float hh = h * pow( abs( r - vUv.y) , spread);
+
+				sum += texture2D( texData, vec2( vUv.x - 4.0 * hh, vUv.y ) ) * 0.051;
+				sum += texture2D( texData, vec2( vUv.x - 3.0 * hh, vUv.y ) ) * 0.0918;
+				sum += texture2D( texData, vec2( vUv.x - 2.0 * hh, vUv.y ) ) * 0.12245;
+				sum += texture2D( texData, vec2( vUv.x - 1.0 * hh, vUv.y ) ) * 0.1531;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y ) ) * 0.1633;
+				sum += texture2D( texData, vec2( vUv.x + 1.0 * hh, vUv.y ) ) * 0.1531;
+				sum += texture2D( texData, vec2( vUv.x + 2.0 * hh, vUv.y ) ) * 0.12245;
+				sum += texture2D( texData, vec2( vUv.x + 3.0 * hh, vUv.y ) ) * 0.0918;
+				sum += texture2D( texData, vec2( vUv.x + 4.0 * hh, vUv.y ) ) * 0.051;
+
+				gl_FragColor = sum;
+
+			}
+
+		</script>
+
+		<script id="tiltVertiFragment" type="x-shader/x-fragment">
+
+			uniform sampler2D texData;
+			uniform float v;
+			uniform float r;
+			uniform float spread;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vec4 sum = vec4( 0.0 );
+
+				float vv = v * pow( abs( r - vUv.y ) ,spread);
+
+				sum += texture2D( texData, vec2( vUv.x, vUv.y - 4.0 * vv ) ) * 0.051;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y - 3.0 * vv ) ) * 0.0918;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y - 2.0 * vv ) ) * 0.12245;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y - 1.0 * vv ) ) * 0.1531;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y ) ) * 0.1633;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y + 1.0 * vv ) ) * 0.1531;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y + 2.0 * vv ) ) * 0.12245;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y + 3.0 * vv ) ) * 0.0918;
+				sum += texture2D( texData, vec2( vUv.x, vUv.y + 4.0 * vv ) ) * 0.051;
+
+				gl_FragColor = sum;
+
+			}
+
 		</script>
 
 	</head>

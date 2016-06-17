@@ -6,6 +6,9 @@ export default class Home extends Component {
 
 	componentDidMount(){
 
+		this.element = ReactDOM.findDOMNode(this);
+		this.world = new World(this.element);
+
 
 	}
 
@@ -14,6 +17,7 @@ export default class Home extends Component {
 		return (
 			<div className="home--container">
 
+				<div className="canvas"/>
 
 			</div>
 		);
