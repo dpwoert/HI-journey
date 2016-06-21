@@ -1,8 +1,8 @@
 (function(){
 
 	var colors = {
-		'after': new THREE.Color(0xff0000),
-		'before': new THREE.Color(0x15D2B6),
+		'after': new THREE.Color(0xf33f00),
+		'before': new THREE.Color(0x04cdae),
 	};
 
 	var safeList = [
@@ -13,7 +13,9 @@
 		'Singapore',
 		'Dubai',
 		'New York',
-		'Bombay',
+		'Mumbai',
+		'Manilla',
+		'Johannesburg'
 	];
 
 	var doubleList = [];

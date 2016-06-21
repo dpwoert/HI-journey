@@ -115,14 +115,27 @@ window.World = function(canvas){
 
 			rows.forEach((person) => {
 
-				route = new Route(world);
+				var route = new Route(world);
+				var route2 = new Route(world);
+
+				if(person.after.length > 0){
+					route2.add(53.480759, -2.242631, 1, 'Manchester');
+				}
 
 				person.before.forEach((spot) => {
 					route.add(spot.location.lat, spot.location.lng, 1, spot.name);
 				});
 
+				person.after.forEach((spot) => {
+					route2.add(spot.location.lat, spot.location.lng, 1, spot.name);
+				});
+
 				route.add(53.480759, -2.242631, 1, 'Manchester');
 				route.build('before');
+
+				if(person.after.length > 0){
+					route2.build('after');
+				}
 
 
 			});
