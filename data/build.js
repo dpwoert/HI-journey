@@ -19,23 +19,27 @@ csv.forEach(function(person){
 		var defer = q.defer();
 		promises.push(defer.promise);
 
-		geocoder.geocode(city, function ( err, data ) {
+		setTimeout(function(){
 
-			if(data.results.length === 0 || !data.results[0].geometry){
-				console.log('not found:' +  city + ' for: ' + person['first_name']);
-				return false
-			}
+			geocoder.geocode(city, function ( err, data ) {
 
-			person.before.push({
-				location: data.results[0].geometry.location,
-				name: data.results[0].address_components[0].long_name
+				if(data.results.length === 0 || !data.results[0].geometry){
+					console.log('not found:' +  city + ' for: ' + person['first_name']);
+					return false
+				}
+
+				person.before.push({
+					location: data.results[0].geometry.location,
+					name: data.results[0].address_components[0].long_name
+				});
+
+				console.log(person['first_name'] + ':' + data.results[0].address_components[0].long_name)
+
+				defer.resolve();
+
 			});
 
-			console.log(person['first_name'] + ':' + data.results[0].address_components[0].long_name)
-
-			defer.resolve();
-
-		});
+		}, 200 * promises.length);
 
 	});
 

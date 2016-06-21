@@ -5,6 +5,7 @@ import { Router, Route, browserHistory, hashHistory, IndexRoute } from 'react-ro
 import App from './components/App';
 import Home from './components/home';
 import Person from './components/person';
+import Persons from './components/persons';
 
 window.React = React;
 
@@ -14,6 +15,7 @@ render(
 	(
 		<Router history={history}>
 			<Route path="/" component={Home}>
+				<IndexRoute component={Persons} />
 				<Route path="/:tool" component={Person} />
 			</Route>
 		</Router>

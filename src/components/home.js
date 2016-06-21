@@ -19,6 +19,12 @@ export default class Home extends Component {
 
 				<div className="canvas"/>
 
+				<div className="persons__container">
+
+					{this.props.children}
+
+				</div>
+
 			</div>
 		);
 	}

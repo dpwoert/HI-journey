@@ -15,7 +15,9 @@
 		'New York',
 		'Mumbai',
 		'Manilla',
-		'Johannesburg'
+		'Johannesburg',
+		'São Paulo',
+		'Madrid'
 	];
 
 	var doubleList = [];

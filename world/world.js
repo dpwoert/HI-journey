@@ -3,7 +3,7 @@ window.World = function(canvas){
 	this.isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');
 
 	var dpr = window.devicePixelRatio = 1;
-	var width = canvas.offsetWidth * dpr;
+	var width = (window.innerWidth - 350) * dpr;
 	var height = window.innerHeight * dpr;
 
 	var renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -169,7 +169,7 @@ window.World = function(canvas){
 	window.addEventListener('resize', function(){
 
 		dpr = window.devicePixelRatio = 1;
-		width = window.innerWidth * dpr;
+		width = (window.innerWidth - 350) * dpr;
 		height = window.innerHeight * dpr;
 		renderer.setSize(width, height);
 
