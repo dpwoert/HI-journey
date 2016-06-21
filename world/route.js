@@ -8,8 +8,15 @@
 	var safeList = [
 		'Manchester',
 		'Sao Paolo',
-		'Berlin'
-	]
+		'Berlin',
+		'Hong Kong',
+		'Singapore',
+		'Dubai',
+		'New York',
+		'Bombay',
+	];
+
+	var doubleList = [];
 
 	var createLabel = function(label, position){
 
@@ -129,7 +136,7 @@
 			}
 
 			//label
-			if(label && safeList.indexOf(label) > -1){
+			if(label && safeList.indexOf(label) > -1 && doubleList.indexOf(label) === -1){
 
 				labelOffset = labelOffset || 0.1;
 
@@ -138,6 +145,8 @@
 
 				meshes.push(_label);
 				world.rotated.add(_label);
+
+				doubleList.push(label);
 
 			}
 

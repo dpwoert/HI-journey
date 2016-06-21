@@ -1,3 +1,5 @@
 first_name,last_name,photo_url,nationality,twitter,instagram,linkedin,before_hyper,after_hyper
-Davey,van der Woert,davey.jpg,NL,dpwoert,dpwoertNL,dpwoert,"51.441642|5.469722|Eindhoven, 51.924420|4.477733|Rotterdam,52.090737|5.12142|Utrecht",
-Roni,Cheung,roni.jpg,HK,,,,"22.301396|114.171295|HongKong, 1.352083|103.819836|Singapore",
+Davey,van der Woert,davey.jpg,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,
+Roni,Cheung,roni.jpg,HK,,,,HongKong;Singapore,
+Dag Otto,Lund,dag.jpg,NO,,,,Oslo,
+Jan Ove,Moen,jan.jpg,NO,,,,Molde;Oslo,
