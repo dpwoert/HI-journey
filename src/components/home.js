@@ -18,6 +18,10 @@ export default class Home extends Component {
 			<div className="home--container">
 
 				<div className="canvas"/>
+				<ul className="home__legend">
+					<li>before hyper <span style={{background: '#04cdae' }} /></li>
+					<li>after hyper <span style={{background: '#f33f00' }} /></li>
+				</ul>
 
 				<div className="persons__container">
 

@@ -23,7 +23,12 @@
 		'Beijing',
 		'Tokyo',
 		'Berlin',
-		'Manilla'
+		'Manilla',
+		'Chicago',
+		'Miami',
+		'Portland',
+		'Sydney',
+		'Stockholm'
 	];
 
 	var doubleList = [];
@@ -83,8 +88,8 @@
 
 		materials[type].line = new THREE.MeshLineMaterial({
 			color: color.clone(),
-			lineWidth: 0.2,
-			opacity: 1,
+			lineWidth: 0.125,
+			opacity: 0.5,
 			transparent: true,
 			resolution: new THREE.Vector2( window.innerWidth, window.innerHeight )
 		});

@@ -103,8 +103,10 @@ csv.forEach(function(person){
 			try{
 				if(data['entry_data'].ProfilePage[0].user.profile_pic_url_hd){
 					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
+					person.hd = true;
 				} else {
 					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url;
+					person.hd = false;
 				}
 				console.log('instagram pic for: ' + person['first_name'] + ' found');
 			}

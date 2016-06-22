@@ -33,7 +33,10 @@ export default class Persons extends Component {
 		d3
 			.json('data/data.json',(error, rows) => {
 
-				rows =
+				rows = shuffle(rows);
+				rows = rows.sort((a,b) => {
+					return a.hd && !b.hd ? 1 : -1;
+				})
 
 				this.setState({
 					persons: shuffle(rows)
