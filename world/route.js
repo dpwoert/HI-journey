@@ -24,7 +24,12 @@
 		'Tokyo',
 		'Berlin',
 		'Manilla',
-		'Chicago'
+		'Chicago',
+		'Miama',
+		'Portland',
+		'Sydney',
+		'Stockholm',
+		'Rio de Janeiro'
 	];
 
 	var doubleList = [];
