@@ -42984,10 +42984,11 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 
 		var addCurve
 
-		this.add = function(lat, lon, curveHeight, label, labelOffset){
+		this.add = function(lat, lon, curveHeight, label, labelOffset, rangeOffset){
 
 			var previous = getPrevious();
-			var point = tools.degreeToVec3(lat, lon, 0.35, world.radius);
+			var point = tools.degreeToVec3(lat, lon, 0.1, world.radius);
+			rangeOffset = rangeOffset || 1;
 			points.push(point);
 			geos.push([lat, lon]);
 
@@ -43000,8 +43001,8 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 				end = turf.point([lat, lon]);
 				var center = turf.midpoint(start, end);
 				var distance = turf.distance(start, end);
-				center = tools.degreeToVec3(center.geometry.coordinates[0], center.geometry.coordinates[1], 0.35, world.radius);
-				center = new THREE.Vector3().lerp(center, range(distance));
+				center = tools.degreeToVec3(center.geometry.coordinates[0], center.geometry.coordinates[1], 0.1, world.radius);
+				center = new THREE.Vector3().lerp(center, range(distance) * rangeOffset);
 
 				// var center = previous.clone().lerp(point, 0.5);
 				// center = new THREE.Vector3(0,0,0).lerp(center, 1 + (curveHeight/10));
@@ -43031,7 +43032,7 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 
 		this.addPoint = function(lat, lon, label, labelOffset){
 
-			var point = tools.degreeToVec3(lat, lon, 0.35, world.radius);
+			var point = tools.degreeToVec3(lat, lon, 0.1, world.radius);
 			points.push( point );
 
 			if(label && safeList.indexOf(label) > -1){
@@ -43264,7 +43265,7 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 					});
 
 					person.after.forEach((spot) => {
-						route2.add(spot.location.lat, spot.location.lng, 1, spot.name);
+						route2.add(spot.location.lat, spot.location.lng, 1, spot.name, undefined, 1.1);
 					});
 
 					route.add(53.480759, -2.242631, 1, 'Manchester');

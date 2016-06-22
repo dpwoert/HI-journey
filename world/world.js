@@ -131,7 +131,7 @@
 					});
 
 					person.after.forEach((spot) => {
-						route2.add(spot.location.lat, spot.location.lng, 1, spot.name);
+						route2.add(spot.location.lat, spot.location.lng, 1, spot.name, undefined, 1.1);
 					});
 
 					route.add(53.480759, -2.242631, 1, 'Manchester');
