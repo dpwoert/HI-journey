@@ -8,6 +8,7 @@ import Person from './components/person';
 import Persons from './components/persons';
 
 window.React = React;
+window.Events = new THREE.EventDispatcher();
 
 const history = hashHistory;
 

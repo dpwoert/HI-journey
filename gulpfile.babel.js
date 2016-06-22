@@ -120,7 +120,7 @@ gulp.task('htmlReplace', ['styles'], () => {
 		.pipe(useref({
 			searchPath: 'dist'
 		}))
-		.pipe(gulpif('*.js', uglify()))
+		// .pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', minifyCss()))
 		.pipe(gulp.dest(paths.dist));
 
@@ -143,7 +143,7 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('lib', () => {
-	return gulp.src(['lib/**/*', 'particles/**/*','bower_components/**/*','world/**/*','CNAME'], {
+	return gulp.src(['lib/**/*', 'data/**/*','bower_components/**/*','world/**/*','CNAME'], {
 		base: '.'
 	}).pipe(gulp.dest('dist'));
 });

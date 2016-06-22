@@ -1,12 +1,30 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+
+	return array;
+}
 
 export default class Persons extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { persons: [] };
+		this.state = { persons: [], active: false };
 	}
 
 
@@ -15,13 +33,35 @@ export default class Persons extends Component {
 		d3
 			.json('data/data.json',(error, rows) => {
 
-				console.log('data loaded', rows);
+				rows =
 
 				this.setState({
-					persons: rows
+					persons: shuffle(rows)
 				});
 
 			});
+
+	}
+
+	click(person){
+
+		const current = this.state.active;
+		if(!current){
+
+			this.setState({
+				active: person['last_name']
+			});
+			window.Events.dispatchEvent({type: 'selectPerson', message: person })
+
+		} else {
+
+			this.setState({
+				active: false
+			});
+			window.Events.dispatchEvent({type: 'selectPerson', message: false })
+
+		}
+
 
 	}
 
@@ -29,11 +69,18 @@ export default class Persons extends Component {
 
 		return (
 			<div className="persons__grid">
-				{this.state.persons.map(function(person, i){
-					var bg = {}
+				{this.state.persons.map((person, i) => {
+					var bg = {};
+					var item = "persons__grid__item";
+
+					if(this.state.active === person['last_name']){
+						item += " active";
+					}
+
 					bg.backgroundImage = person.instagramPic ? 'url(' + person.instagramPic + ')' : '';
 					return (
-						<div className="persons__grid__item" key={i} style={bg}>
+						<div className={item} key={i} style={bg} onClick={this.click.bind(this, person)}>
+							<div className="persons__grid__overlay" />
 							<div className="persons__grid__name">{person['first_name']} {person['last_name']}</div>
 						</div>
 					);

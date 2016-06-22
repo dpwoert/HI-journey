@@ -14,11 +14,14 @@
 	&__grid__item{
 		position: relative;
 		width: 50%;
-		padding-top: 50%;
+		padding-top: 70%;
 		float: left;
 
 		background-size: cover;
 		background-position: center center;
+
+		filter: grayscale(0.9);
+		transition: filter 0.2s ease;
 
 		&:nth-child(1n+0){
 			background-color: #eee;
@@ -32,6 +35,10 @@
 		&:nth-child(4n+0){
 			background-color: #aaa;
 		}
+
+		&:hover, &.active{
+			filter: grayscale(0);
+		}
 	}
 
 	&__grid__name{
@@ -42,6 +49,17 @@
 		font-family: 'Avenir, helvetica, arial', sans-serif;
 		font-size: 11px;
 		color: black;
+		color: white;
+		font-weight: bold;
+		padding: 0 16px;
+	}
+
+	&__grid__overlay{
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		height: 33%;
+		background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(255,255,255,0) 100%);
 	}
 
 }

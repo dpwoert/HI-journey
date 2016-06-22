@@ -14,7 +14,6 @@ export default class Person extends Component {
 		return (
 			<div className="person__container">
 
-
 			</div>
 		);
 	}
