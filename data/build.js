@@ -99,8 +99,19 @@ csv.forEach(function(person){
 			return window._sharedData;
 		})
 		.then(function(data, utils) {
-			console.log('instagram pic for: ' + person['first_name'] + ' found');
-			person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
+
+			try{
+				if(data['entry_data'].ProfilePage[0].user.profile_pic_url_hd){
+					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
+				} else {
+					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url;
+				}
+				console.log('instagram pic for: ' + person['first_name'] + ' found');
+			}
+			catch(e){
+				console.log('instagram pic for: ' + person['first_name'] + ' not found');
+			}
+
 			defer.resolve();
 			utils.stop();
 		})

@@ -1,11 +1,11 @@
-first_name,last_name,photo_url,nationality,twitter,instagram,linkedin,before_hyper,after_hyper
-Davey,van der Woert,davey.jpg,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,London
-Roni,Cheung,roni.jpg,HK,,,,HongKong;Singapore,London
-Dag Otto,Lund,dag.jpg,NO,,,,Oslo,London
-Jan Ove,Moen,jan.jpg,NO,,,,Molde;Oslo,
-Howard,Mijares,howard.jpg,PH,,,,Manilla;Singapore,Dubai
-Aksha,Sachdev,aksha.jpg,IN,,,,Mumbai,Mumbai
-Katie,Shelly,katie.jpg,US,,,,New York,Manchester
-Marcela,Ospina,marcela.jpg,CO,,,,Colombia;Johannesburg,London
-Dan,Nessler,dan.jpg,CH,nessie420,dannessie420,dan.nessler,Zurich Switzerland,Zurich Switzerland
-Marco,Candi,marco.jpg,BR,,,,Sao Paulo;Israel;Sao Paulo,New York
+first_name,last_name,nationality,twitter,instagram,linkedin,before_hyper,after_hyper
+Davey,van der Woert,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,London
+Roni,Cheung,HK,,piscesroni,,HongKong;Singapore,London
+Dag Otto,Christensen,NO,,dagotto,,Oslo,London
+Jan Ove,Moen,NO,,janovem,,Molde;Oslo,
+Howard,Mijares,PH,,howardmijares,,Manilla;Singapore,Dubai
+Aksha,Sachdev,IN,,aksha1987,,Mumbai,Mumbai
+Katie,Shelly,US,,interkatie,,New York,Manchester
+Marcela,Ospina,CO,,marce_lejana,,Colombia;Johannesburg,London
+Dan,Nessler,CH,nessie420,dannessie420,dan.nessler,Zurich,Zurich
+Marco,Candi,BR,,marcocandi,,Sao Paulo;Israel;Sao Paulo,New York

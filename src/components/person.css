@@ -21,16 +21,16 @@
 		background-position: center center;
 
 		&:nth-child(1n+0){
-			background: #eee;
+			background-color: #eee;
 		}
 		&:nth-child(2n+0){
-			background: #ddd;
+			background-color: #ddd;
 		}
 		&:nth-child(3n+0){
-			background: #ccc;
+			background-color: #ccc;
 		}
 		&:nth-child(4n+0){
-			background: #aaa;
+			background-color: #aaa;
 		}
 	}
 
