@@ -2,10 +2,12 @@ var fs = require('fs');
 var parseCsv = require('dank-csv');
 var geocoder = require('geocoder');
 var q = require('q');
+var scraperjs = require('scraperjs');
 
 var data = fs.readFileSync(__dirname + '/hyper.csv');
 var csv = parseCsv(data.toString('utf8'));
 var promises = [];
+
 
 csv.forEach(function(person){
 
@@ -53,30 +55,57 @@ csv.forEach(function(person){
 		var defer = q.defer();
 		promises.push(defer.promise);
 
-		geocoder.geocode(city, function ( err, data ) {
+		setTimeout(function(){
 
-			if(!data || data.results.length === 0 || err){
-				console.log('err', err);
-				return false;
-			}
+			geocoder.geocode(city, function ( err, data ) {
 
-			if(!data.results.length === 0 || !data.results[0].geometry){
-				console.log('not found:' +  city + ' for: ' + person['first_name']);
-				return false;
-			}
+				if(!data || data.results.length === 0 || err){
+					console.log('err', err);
+					return false;
+				}
 
-			person.after.push({
-				location: data.results[0].geometry.location,
-				name: data.results[0].address_components[0].long_name
+				if(!data.results.length === 0 || !data.results[0].geometry){
+					console.log('not found:' +  city + ' for: ' + person['first_name']);
+					return false;
+				}
+
+				person.after.push({
+					location: data.results[0].geometry.location,
+					name: data.results[0].address_components[0].long_name
+				});
+
+				console.log(person['first_name'] + ':' + data.results[0].address_components[0].long_name)
+
+				defer.resolve();
+
 			});
 
-			console.log(person['first_name'] + ':' + data.results[0].address_components[0].long_name)
-
-			defer.resolve();
-
-		});
+		}, 200 * promises.length);
 
 	});
+
+
+	//get instagram data
+	if(person.instagram){
+
+		console.log('scraping instagram pic for: ' + person.instagram);
+
+		var defer = q.defer();
+		promises.push(defer.promise);
+
+		scraperjs.DynamicScraper.create('https://www.instagram.com/'+ person.instagram +'/')
+		.delay(1000)
+		.scrape(function($) {
+			return window._sharedData;
+		})
+		.then(function(data, utils) {
+			console.log('instagram pic for: ' + person['first_name'] + ' found');
+			person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
+			defer.resolve();
+			utils.stop();
+		})
+
+	}
 
 });
 

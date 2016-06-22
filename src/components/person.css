@@ -17,6 +17,9 @@
 		padding-top: 50%;
 		float: left;
 
+		background-size: cover;
+		background-position: center center;
+
 		&:nth-child(1n+0){
 			background: #eee;
 		}

@@ -30,7 +30,8 @@ export default class Persons extends Component {
 		return (
 			<div className="persons__grid">
 				{this.state.persons.map(function(person, i){
-					var bg = { backgroundImage: person['photo_url'] };
+					var bg = {}
+					bg.backgroundImage = person.instagramPic ? 'url(' + person.instagramPic + ')' : '';
 					return (
 						<div className="persons__grid__item" key={i} style={bg}>
 							<div className="persons__grid__name">{person['first_name']} {person['last_name']}</div>

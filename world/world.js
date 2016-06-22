@@ -65,6 +65,8 @@ window.World = function(canvas){
 
 	//get colors
 	var loader = new THREE.XHRLoader();
+	var cdark = new THREE.Color(0.2,0.2,0.2);
+	var clight = new THREE.Color('#fff');
 	loader.load('data/map.json', function (res) {
 
 		var geometry = new THREE.IcosahedronGeometry( this.radius, cells );
@@ -78,15 +80,15 @@ window.World = function(canvas){
 		var faces = JSON.parse( res );
 		faces.forEach(function(face, i){
 			// console.log(i, face.inside);
-			var color = !face.inside ? 1 : 0.2;
-			geometry.faces[i].color = new THREE.Color(color, color, color);
+			var color = face.inside ? cdark : clight;
+			geometry.faces[i].color = color.clone();
 		});
 
 		//heights
 		var center = new THREE.Vector3(0,0,0);
 		geometry.vertices.forEach(function(vertex){
 			var offset = Math.random();
-			vertex = vertex.lerp(center, -offset/25);
+			vertex = vertex.lerp(center, -offset/200);
 		});
 
 		this.scene.add(mesh);

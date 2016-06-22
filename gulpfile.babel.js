@@ -143,7 +143,7 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('lib', () => {
-	return gulp.src(['lib/**/*', 'particles/**/*','bower_components/**/*','pdf/**/*','CNAME'], {
+	return gulp.src(['lib/**/*', 'particles/**/*','bower_components/**/*','world/**/*','CNAME'], {
 		base: '.'
 	}).pipe(gulp.dest('dist'));
 });

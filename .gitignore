@@ -4,3 +4,4 @@ bower_components
 *.log
 dist
 .publish/
+data/insta.js
