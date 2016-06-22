@@ -23,7 +23,8 @@
 		'Beijing',
 		'Tokyo',
 		'Berlin',
-		'Manilla'
+		'Manilla',
+		'Chicago'
 	];
 
 	var doubleList = [];
