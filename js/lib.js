@@ -42879,7 +42879,6 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 	var safeList = [
 		'Manchester',
 		'Sao Paolo',
-		'São Paulo',
 		'Berlin',
 		'Hong Kong',
 		'Singapore',
@@ -42889,12 +42888,7 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 		'Manilla',
 		'Johannesburg',
 		'São Paulo',
-		'Madrid',
-		'Melbourne',
-		'Beijing',
-		'Tokyo',
-		'Berlin',
-		'Manilla'
+		'Madrid'
 	];
 
 	var doubleList = [];

@@ -8,7 +8,6 @@
 	var safeList = [
 		'Manchester',
 		'Sao Paolo',
-		'São Paulo',
 		'Berlin',
 		'Hong Kong',
 		'Singapore',
@@ -18,12 +17,7 @@
 		'Manilla',
 		'Johannesburg',
 		'São Paulo',
-		'Madrid',
-		'Melbourne',
-		'Beijing',
-		'Tokyo',
-		'Berlin',
-		'Manilla'
+		'Madrid'
 	];
 
 	var doubleList = [];
