@@ -236,6 +236,12 @@
 
 		};
 
+		this.show = function(show){
+			meshes.forEach(function(mesh){
+				mesh.visible = show;
+			});
+		};
+
 		this.remove = function(){
 			meshes.forEach(function(mesh){
 				world.rotated.remove(mesh);

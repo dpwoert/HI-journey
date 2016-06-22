@@ -139,6 +139,27 @@ window.World = function(canvas){
 					route2.build('after');
 				}
 
+				window.Events.addEventListener('selectPerson', function(evt){
+
+					var msg = evt.message;
+
+					if(!msg){
+						route.show(true);
+						route2.show(true);
+					}
+
+					else if(msg['last_name'] === person['last_name']){
+						route.show(true);
+						route2.show(true);
+					}
+
+					else if(msg['last_name'] !== person['last_name']){
+						route.show(false);
+						route2.show(false);
+					}
+
+				})
+
 
 			});
 
