@@ -42889,6 +42889,10 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 		'Johannesburg',
 		'São Paulo',
 		'Madrid'
+		'Melbourne',
+		'Beijing',
+		'Tokyo',
+		'Berlin'
 	];
 
 	var doubleList = [];

@@ -18,6 +18,10 @@
 		'Johannesburg',
 		'São Paulo',
 		'Madrid'
+		'Melbourne',
+		'Beijing',
+		'Tokyo',
+		'Berlin'
 	];
 
 	var doubleList = [];
