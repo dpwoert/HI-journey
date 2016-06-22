@@ -42896,11 +42896,10 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 		'Berlin',
 		'Manilla',
 		'Chicago',
-		'Miama',
+		'Miami',
 		'Portland',
 		'Sydney',
-		'Stockholm',
-		'Rio de Janeiro'
+		'Stockholm'
 	];
 
 	var doubleList = [];
@@ -42960,8 +42959,8 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 
 		materials[type].line = new THREE.MeshLineMaterial({
 			color: color.clone(),
-			lineWidth: 0.2,
-			opacity: 1,
+			lineWidth: 0.125,
+			opacity: 0.5,
 			transparent: true,
 			resolution: new THREE.Vector2( window.innerWidth, window.innerHeight )
 		});
