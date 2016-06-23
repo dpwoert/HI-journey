@@ -42897,7 +42897,6 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 		'Manilla',
 		'Chicago',
 		'Miami',
-		'Portland',
 		'Sydney',
 		'Stockholm',
 		'Vancouver'

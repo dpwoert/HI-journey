@@ -26,7 +26,6 @@
 		'Manilla',
 		'Chicago',
 		'Miami',
-		'Portland',
 		'Sydney',
 		'Stockholm',
 		'Vancouver'
