@@ -26,9 +26,9 @@
 		'Manilla',
 		'Chicago',
 		'Miami',
-		'Portland',
 		'Sydney',
-		'Stockholm'
+		'Stockholm',
+		'Vancouver'
 	];
 
 	var doubleList = [];

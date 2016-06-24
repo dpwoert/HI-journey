@@ -1,14 +1,54 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+
+	return array;
+}
 
 export default class Home extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = { persons: [] };
+	}
 
 	componentDidMount(){
 
 		this.element = ReactDOM.findDOMNode(this);
 		this.world = new World(this.element);
 
+	}
+
+	componentWillMount(){
+
+		d3
+			.json('data/data.json',(error, rows) => {
+
+				rows = shuffle(rows);
+				rows = rows.sort((a,b) => {
+					return a.hd && !b.hd ? 1 : -1;
+				})
+
+				this.setState({
+					persons: shuffle(rows)
+				});
+
+			});
 
 	}
 
@@ -25,7 +65,7 @@ export default class Home extends Component {
 
 				<div className="persons__container">
 
-					{this.props.children}
+					{ React.cloneElement(this.props.children, {persons: this.state.persons}) }
 
 				</div>
 

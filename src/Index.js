@@ -17,7 +17,7 @@ render(
 		<Router history={history}>
 			<Route path="/" component={Home}>
 				<IndexRoute component={Persons} />
-				<Route path="/:tool" component={Person} />
+				<Route path="/:person" component={Person} />
 			</Route>
 		</Router>
 	), document.getElementById('content')
