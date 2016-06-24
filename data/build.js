@@ -16,6 +16,9 @@ csv.forEach(function(person){
 	person.before = [];
 	person.after = [];
 
+	person.slug = person['first_name'].replace(/ /g, '-') + '-' + person['last_name'].replace(/ /g, '-');
+	person.slug = person.slug.toLowerCase();
+
 	cities.forEach(function(city){
 
 		var defer = q.defer();
