@@ -22,15 +22,18 @@ export default class Persons extends Component {
 
 	render() {
 
-		window.Events.dispatchEvent({type: 'selectPerson', message: false })
+		window.Events.dispatchEvent({type: 'selectPerson', message: false });
 
+		const persons = this.props.persons.sort((a,b) => {
+			return (a.hd && !b.hd) ? -1 : 1;
+		});
 
 		return (
 			<div className="persons__grid">
-				{this.props.persons.map((person, i) => {
+				{persons.map((person, i) => {
 					var bg = {};
 					var item = "persons__grid__item";
-					var url = '/' + person.slug;
+					var url = '/@/' + person.slug;
 
 					if(this.state.active === person['last_name']){
 						item += " active";
