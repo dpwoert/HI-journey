@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
 
 function shuffle(array) {
 	var currentIndex = array.length, temporaryValue, randomIndex;
@@ -66,6 +67,11 @@ export default class Home extends Component {
 				<div className="persons__container">
 
 					{ React.cloneElement(this.props.children, {persons: this.state.persons}) }
+
+					<ul className="persons__tabs">
+						<li className="persons__tab--person"><Link to="/"><img src="images/face.svg"/> list</Link></li>
+						<li className="persons__tab--city"><Link to="/cities"><img src="images/city.svg"/> cities</Link></li>
+					</ul>
 
 				</div>
 

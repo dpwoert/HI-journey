@@ -24,9 +24,27 @@ export default class Persons extends Component {
 
 		window.Events.dispatchEvent({type: 'selectPerson', message: false });
 
-		const persons = this.props.persons.sort((a,b) => {
+		let persons = this.props.persons.sort((a,b) => {
 			return (a.hd && !b.hd) ? -1 : 1;
 		});
+
+		if(this.props.params.city){
+			persons = persons.filter((a) => {
+
+				if(a.after.length === 0){
+					return false;
+				}
+
+				var lastCity = a.after[a.after.length - 1].name;
+				lastCity = lastCity.replace(/ /g, '-').toLowerCase();
+
+				if(lastCity === this.props.params.city){
+					return true;
+				}
+
+				return false;
+			});
+		}
 
 		return (
 			<div className="persons__grid">
