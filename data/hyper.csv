@@ -1,54 +1,55 @@
 first_name,last_name,nationality,twitter,instagram,linkedin,before_hyper,after_hyper
-Lisa,Sibbing,NL,lisasibbing,lisasibbing,lisasibbing,Rotterdam;Amsterdam;Berlin,Berlin
-Mathilde,Dongala,FR,,,Lukeidesign,Paris,Berlin 
-Josephine,Hjort,DK,,josephinehjort,Josephine Hjort,Copenhagen;Melbourne;Sydney,Copenhagen
-Howard,Mijares,PH,,howardmijares,,Manilla;San Francisco;Singapore,Dubai
-Davey,van der Woert,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,London
-Roni,Cheung,HK,tweettoroni,piscesroni,,HongKong;Singapore,London
-Dag Otto,Christensen,NO,,dagotto,,Oslo,London
-Marcela,Ospina,CO,,marce_lejana,,Colombia;Johannesburg,London
-Tom,Anderson,UK,ThisIsTomsBlog,,Thomas Anderson,"Cambridge UK, London",London
-Katie,Shelly,US,interkatie,interkatie,,New York,Manchester
-Ali,Rome,UK,alison_rome,alisonrome,alisonrome,Dundee,Manchester
-Emelie,Wänstedt,SE,emeliewa,emelie_wa,emeliewanstedt,Luleå;Tokyo;Örebro;Luleå,Manchester
-Letizia,Lodi,IT,LetiziaLodi,titsola,Letizia Titti Lodi,Bologna;Melbourne ,Manchester
-Radina,Doneva,BG,radinadoneva,rada.rey,radinadoneva,San Francisco,Manchester
-Sara,Ramos,PT,saranramos,saramnramos,saramnramos/en,Porto,Manchester;London
-Susanne,Ljungberg,SE,,,susanneljungberg,Gothenburg;London;Miami;Sydney,Manchester;Stockholm;Amsterdam;Berlin
-Jan Ove,Moen,NO,,janovem,,Molde;Oslo,Molde
 Aksha,Sachdev,IN,AkshaSachdev,aksha1986,aksha-sachdev,Mumbai,Mumbai
-Marco,Candi,BR,,marcocandi,,Sao Paulo;Israel;Sao Paulo,New York
+Ali,Rome,UK,alison_rome,alisonrome,alisonrome,Dundee,Manchester
 Anna,Evans,SE,ideskafferiet,ideskafferiet,anna-evans-7977301,Seoul;Halmstad;San Antonio TX;Halmstad;Paris;Lund;Surrey;Gothenburg;Lucerne;London;Stockholm,Stockholm
-Dan,Nessler,CH,nessie420,dannessie420,dannessler,Zurich,Zurich
-Stefan,Jost,CH,_stefanjost,,,Zurich,Zurich
+Antoine,Ballif,FR,,,,Paris,Paris
 Clara,Aparisi,ES,claraaparisi,claretaab,Clara Aparisi,Valencia; Beijing; London,
-Mira,Bordoloi,,momibo,momibo,mbordoloi,Chicago;Portland;St.Louis,
-Gabriel,Negri,BR,gabrielnegri,gabrielnegri,Gabriel Negri,Rio de Janeiro,
-Thomas,Rasmussen,CA,itwarasmussen,itwasrasmussen,,Vancouver,Copenhagen
-Nurul,Ibrahim,IN,raishanurul,raishanurul,Nurul Ibrahim,Jakarta,
+Clara,Parada,BR/IT,,,Maria Clara Parada,São Paulo,"Helsinki, San Francisco; São Paulo"
+Dag Otto,Christensen,NO,,dagotto,,Oslo,London
+Dalma,Kadocsa,HU,,,,,
+Dan,Nessler,CH,nessie420,dannessie420,dannessler,Zurich,Zurich
 Daniel,Santos,PT,danieltsantos,danieltsantos,danieltsantos,Mumbai,Manchester; Porto; Lisbon; Berlin; Amsterdam; Stockholm; Copenhagen
-Tim,Arlestig,SE,,,Tim Arlestig,Stockholm,London
+Davey,van der Woert,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,London
 Davis,Levine,CA,davislevine,dlevine90,Davis Levine,Edmonton,Victoria canada
-Gabriela,Triffiletti,ES,gabrielatriffi,gabrielatriffiletti,gabrielatriffiletti,Madrid,London
 Dominic,Burr,GB,i_am_dom_burr,jpegjpegjpeg,dominic-burr-b421ab43,London,London
-Mabel,Lazzarin,BR,belxlaz,belxlaz,belxlaz,Florianópolis;London,Bournemouth
-Natalie,McCarthy,GB,nmccarthy_,nmccarthy_,nataliebethmccarthy,London;Manchester,Manchester;London
+Emelie,Wänstedt,SE,emeliewa,emelie_wa,emeliewanstedt,Luleå;Tokyo;Örebro;Luleå,Manchester
+Érika,Mendes,BR,,erikarmendes,erikamendes,Sao Paulo,Manchester
+Gabriel,Negri,BR,gabrielnegri,gabrielnegri,Gabriel Negri,Rio de Janeiro,
+Gabriela,Triffiletti,ES,gabrielatriffi,gabrielatriffiletti,gabrielatriffiletti,Madrid,London
+Howard,Mijares,PH,,howardmijares,,Manilla;San Francisco;Singapore,Dubai
+Jan Ove,Moen,NO,janove,janovem,jan-ove-moen-3872888,Molde;Oslo,Molde
 Joel,van Bodegraven,NL,,,,Amsterdam,Amsterdam
-Érika,Mendes,BR,,,,Sao Paulo,Manchester
-Patrick,Turtchin,BR,,,,Sao Paulo,Sao Paolo
-Kara,Kane,,,,,,London
+Josephine,Hjort,DK,,josephinehjort,Josephine Hjort,Copenhagen;Melbourne;Sydney,Copenhagen
+Kara,Kane,US,KaraKane_kk,karakane_kk,kara-kane-32957024,New York;London,London
+Katie,Shelly,US,interkatie,interkatie,,New York,Manchester
+Letizia,Lodi,IT,LetiziaLodi,titsola,Letizia Titti Lodi,Bologna;Melbourne ,Manchester
+Lisa,Sibbing,NL,lisasibbing,lisasibbing,lisasibbing,Rotterdam;Amsterdam;Berlin,Berlin
+Mabel,Lazzarin,BR,belxlaz,belxlaz,belxlaz,Florianópolis;London,Bournemouth
+Marcela,Ospina,CO,,marce_lejana,,Colombia;Johannesburg,London
+Marco,Candi,BR,,marcocandi,Marcocandi,Sao Paulo;Israel;Sao Paulo,New York
+Mario,Gabric,AT,,,,,Manchester
+Mathilde,Dongala,FR,,,Lukeidesign,Paris,Berlin 
+Mayra,Kapteyn,NL,,,,Amsterdam,
+Mira,Bordoloi,,momibo,momibo,mbordoloi,Chicago;Portland;St.Louis,
+Mustafa,Gokeri,CY,,,,,New York
+Nadine,Kriegelstein ,AT,,,,,
+Natalie,McCarthy,GB,nmccarthy_,nmccarthy_,nataliebethmccarthy,London;Manchester,Manchester;London
 Natasha,McNamara,CA,,,,,London
-Sergio,de Andrade,BR,,,,Sao Paolo,London
+Nurul,Ibrahim,IN,raishanurul,raishanurul,Nurul Ibrahim,Jakarta,
+Patrick,Turtchin,BR,,,,Sao Paulo,Sao Paolo
+Radina,Doneva,BG,radinadoneva,rada.rey,radinadoneva,San Francisco,Manchester
 Renzo,Vallejo,PE,,,,,
+Roni,Cheung,HK,tweettoroni,piscesroni,,HongKong;Singapore,London
+Sara,Ramos,PT,saranramos,saramnramos,saramnramos/en,Porto,Manchester;London
+Sergio,de Andrade,BR,,,,Sao Paolo,London
+Shirley,Sarker,US,,,,,Manchester
+Sofia,Nihlén,SE,,,,,
+Stefan,Jost,CH,_stefanjost,,,Zurich,Zurich
+Susanne,Ljungberg,SE,,,susanneljungberg,Gothenburg;London;Miami;Sydney,Manchester;Stockholm;Amsterdam;Berlin
+Sydney,Johnson,CA,,,,,
+Thomas,Rasmussen,CA,itwarasmussen,itwasrasmussen,thomasboierasmussen,Vancouver,Copenhagen
+Tim,Arlestig,SE,,,Tim Arlestig,Stockholm,London
+Tom,Anderson,UK,ThisIsTomsBlog,,Thomas Anderson,"Cambridge UK, London",London
+Vanessa,Jennings,UK,,,,,Manchester
 Viktor,Olsson,SE,,,,,London
 Yann Merian,Merian,FR,,,,,Manchester
-Mayra,Kapteyn,NL,,,,,
-Nadine,Kriegelstein ,AT,,,,,
-Sydney,Johnson,CA,,,,,
-Sofia,Nihlén,SE,,,,,
-Shirley,Sarker,US,,,,,
-Mustafa,Gokeri,CY,,,,,
-Antoine,Ballif,FR,,,,Paris,Paris
-Dalma,Kadocsa,HU,,,,,
-Vanessa,Jennings,UK,,,,,
-Mario,Gabric,AT,,,,,
