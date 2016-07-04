@@ -28,9 +28,9 @@ csv.forEach(function(person){
 
 			geocoder.geocode(city, function ( err, data ) {
 
-				if(data.results.length === 0 || !data.results[0].geometry){
+				if(err || data.results.length === 0 || !data.results[0].geometry){
 					console.log('not found:' +  city + ' for: ' + person['first_name']);
-					return false
+					return false;
 				}
 
 				person.before.push({

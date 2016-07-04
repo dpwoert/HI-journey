@@ -43151,6 +43151,10 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 
 		this.isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');
 
+		if(window.innerWidth < 700){
+			return false;
+		}
+
 		var dpr = window.devicePixelRatio = 1;
 		var width = (window.innerWidth - 350) * dpr;
 		var height = window.innerHeight * dpr;
@@ -43264,7 +43268,7 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 
 				console.log(rows);
 
-				rows.forEach((person) => {
+				rows.forEach(function(person){
 
 					var route = new Route(world);
 					var route2 = new Route(world);
@@ -43273,11 +43277,11 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 						route2.add(53.480759, -2.242631, 1, 'Manchester');
 					}
 
-					person.before.forEach((spot) => {
+					person.before.forEach(function(spot){
 						route.add(spot.location.lat, spot.location.lng, 1, spot.name);
 					});
 
-					person.after.forEach((spot) => {
+					person.after.forEach(function(spot){
 						route2.add(spot.location.lat, spot.location.lng, 1, spot.name, undefined, 1.1);
 					});
 
@@ -43310,7 +43314,7 @@ THREE.MeshLineMaterial.prototype.copy = function ( source ) {
 					})
 
 
-				});
+				}.bind(this));
 
 			});
 
