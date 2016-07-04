@@ -30,6 +30,7 @@ csv.forEach(function(person){
 
 				if(err || data.results.length === 0 || !data.results[0].geometry){
 					console.log('not found:' +  city + ' for: ' + person['first_name']);
+					defer.resolve();
 					return false;
 				}
 
