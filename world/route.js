@@ -30,7 +30,8 @@
 		'Stockholm',
 		'Vancouver',
 		'Jakarta',
-		'Manila'
+		'Manila',
+		'San Francisco'
 	];
 
 	var doubleList = [];
