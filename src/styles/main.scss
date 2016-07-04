@@ -40,6 +40,10 @@ canvas{
 		vertical-align: middle;
 		margin-left: 3px;
 	}
+
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
 }
 
 

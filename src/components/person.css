@@ -11,6 +11,10 @@
 		padding-bottom: 48px;
 
 		overflow: auto;
+
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 	}
 
 	&__grid__item{
@@ -103,6 +107,10 @@
 			margin-right: 6px;
 		}
 
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
+
 	}
 
 }
@@ -128,10 +136,13 @@
 		border: 2px solid white;
 		text-decoration: none;
 
-		background: url('../images/back.svg');
+		background-color: rgba(0, 0, 0, 0.09);
+		background-image: url('../images/back.svg');
 		background-size: 70% auto;
 		background-position: center center;
 		background-repeat: no-repeat;
+
+		box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.15);
 	}
 
 	&__name{

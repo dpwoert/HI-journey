@@ -4,6 +4,10 @@
 
 		this.isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');
 
+		if(window.innerWidth < 700){
+			return false;
+		}
+
 		var dpr = window.devicePixelRatio = 1;
 		var width = (window.innerWidth - 350) * dpr;
 		var height = window.innerHeight * dpr;
