@@ -31,7 +31,7 @@ export default class Home extends Component {
 	componentDidMount(){
 
 		this.element = ReactDOM.findDOMNode(this);
-		this.world = new World(this.element);
+		// this.world = new World(this.element);
 
 	}
 
@@ -71,6 +71,7 @@ export default class Home extends Component {
 					<ul className="persons__tabs">
 						<li className="persons__tab--person"><Link to="/"><img src="images/face.svg"/> list</Link></li>
 						<li className="persons__tab--city"><Link to="/cities"><img src="images/city.svg"/> cities</Link></li>
+						<li className="persons__tab--research"><Link to="/research"><img src="images/research.svg"/> research</Link></li>
 					</ul>
 
 				</div>

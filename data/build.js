@@ -2,12 +2,11 @@ var fs = require('fs');
 var parseCsv = require('dank-csv');
 var geocoder = require('geocoder');
 var q = require('q');
-var scraperjs = require('scraperjs');
+var Nightmare = require('nightmare');
 
 var data = fs.readFileSync(__dirname + '/hyper.csv');
 var csv = parseCsv(data.toString('utf8'));
 var promises = [];
-
 
 csv.forEach(function(person){
 
@@ -64,7 +63,7 @@ csv.forEach(function(person){
 			geocoder.geocode(city, function ( err, data ) {
 
 				if(!data || data.results.length === 0 || err){
-					console.log('err', err);
+					console.log('error', err, data.results.length);
 					return false;
 				}
 
@@ -92,39 +91,47 @@ csv.forEach(function(person){
 	//get instagram data
 	if(person.instagram){
 
-		console.log('scraping instagram pic for: ' + person.instagram);
+		console.log('prepare scraping instagram pic for: ' + person.instagram);
 
-		var defer = q.defer();
-		promises.push(defer.promise);
+		var insta = new Nightmare();
+		var instaDef = q.defer();
+		promises.push(instaDef.promise);
 
-		scraperjs.DynamicScraper.create('https://www.instagram.com/'+ person.instagram +'/')
-		.delay(1000)
-		.scrape(function($) {
-			return window._sharedData;
-		})
-		.then(function(data, utils) {
+		setTimeout(function(){
+			insta
+				.goto('https://www.instagram.com/'+ person.instagram +'/')
+				.evaluate(function () {
+					return window._sharedData;
+				})
+				.end()
+				.then(function(data) {
 
-			try{
-				if(data['entry_data'].ProfilePage[0].user.profile_pic_url_hd){
-					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
-					person.hd = true;
-				} else {
-					person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url;
-					person.hd = false;
-				}
-				console.log('instagram pic for: ' + person['first_name'] + ' found');
-			}
-			catch(e){
-				console.log('instagram pic for: ' + person['first_name'] + ' not found');
-			}
+					try{
+						if(data['entry_data'].ProfilePage[0].user.profile_pic_url_hd){
+							person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url_hd;
+							person.hd = true;
+						} else {
+							person.instagramPic = data['entry_data'].ProfilePage[0].user.profile_pic_url;
+							person.hd = false;
+						}
+						console.log('instagram pic for: ' + person['first_name'] + ' found');
+					}
+					catch(e){
+						console.log('instagram pic for: ' + person['first_name'] + ' not found');
+					}
 
-			defer.resolve();
-			utils.stop();
-		})
+					instaDef.resolve();
+
+				})
+
+			insta.run(function(){});
+
+		}, promises.length * 750);
 
 	}
 
 });
+
 
 q
 	.all(promises)

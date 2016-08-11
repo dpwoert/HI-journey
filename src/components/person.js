@@ -41,10 +41,14 @@ export default class Person extends Component {
 				<h2 className="person__name">{person['first_name']} {person['last_name']}</h2>
 
 				<ul className="person__social">
-					<li><a target="_blank" href={'https://twitter.com/@' + person.twitter}>twitter</a></li>
-					<li><a target="_blank" href={'https://www.linkedin.com/in/' + person.linkedin}>LinkedIn</a></li>
-					<li><a target="_blank" href={'https://www.instagram.com/' + person.instagram}>instagram</a></li>
+					{ person.website ? <li><a target="_blank" href={'https://twitter.com/@' + person.twitter}>website</a></li> : null }
+					{ person.twitter ? <li><a target="_blank" href={'https://twitter.com/@' + person.twitter}>twitter</a></li> : null }
+					{ person.linkedin ? <li><a target="_blank" href={'https://www.linkedin.com/in/' + person.linkedin}>LinkedIn</a></li> : null }
+					{ person.instagram ? <li><a target="_blank" href={'https://www.instagram.com/' + person.instagram}>instagram</a></li> : null }
 				</ul>
+
+				{ person['IRP_topic'] ? <div className="person__research">research topic: <span>{person['IRP_topic']}</span></div> : null }
+				{ person['IRP_url'] ? <a href={person['IRP_url']} target="_blank" className="person__research__url">read more</a> : null }
 
 				<ul className="person__trip">
 					{person.before.map((city, i) => {

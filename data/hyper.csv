@@ -1,56 +1,56 @@
-first_name,last_name,nationality,twitter,instagram,linkedin,before_hyper,after_hyper
-Aksha,Sachdev,IN,AkshaSachdev,aksha1986,aksha-sachdev,Mumbai,Mumbai
-Ali,Rome,UK,alison_rome,alisonrome,alisonrome,Dundee,Manchester
-Anna,Evans,SE,ideskafferiet,ideskafferiet,anna-evans-7977301,Seoul;Halmstad;San Antonio TX;Halmstad;Paris;Lund;Surrey;Gothenburg;Lucerne;London;Stockholm,Stockholm
-Antoine,Ballif,FR,,,,Paris,Paris
-Clara,Aparisi,ES,claraaparisi,claretaab,Clara Aparisi,Valencia; Beijing; London,
-Clara,Parada,BR/IT,,,Maria Clara Parada,São Paulo,"Helsinki, San Francisco; São Paulo"
-Dag Otto,Christensen,NO,dachotto,dagotto,dag-otto-lund-christensen-8169893b,Oslo,London
-Dalma,Kadocsa,HU,,dalmakad,,,
-Dan,Nessler,CH,nessie420,dannessie420,dannessler,Zurich,Zurich
-Daniel,Santos,PT,danieltsantos,danieltsantos,danieltsantos,Mumbai,Manchester; Porto; Lisbon; Berlin; Amsterdam; Stockholm; Copenhagen
-Davey,van der Woert,NL,dpwoert,dpwoertNL,dpwoert,Eindhoven;Rotterdam;Utrecht,London
-Davis,Levine,CA,davislevine,dlevine90,Davis Levine,Edmonton,Victoria canada
-Dominic,Burr,GB,i_am_dom_burr,jpegjpegjpeg,dominic-burr-b421ab43,London,London
-Emelie,Wänstedt,SE,emeliewa,emelie_wa,emeliewanstedt,Luleå;Tokyo;Örebro;Luleå,Manchester
-Érika,Mendes,BR,,erikarmendes,erikamendes,Sao Paulo,Manchester
-Gabriel,Negri,BR,gabrielnegri,gabrielnegri,Gabriel Negri,Rio de Janeiro,
-Gabriela,Triffiletti,ES,gabrielatriffi,gabrielatriffiletti,gabrielatriffiletti,Madrid,London
-Howard,Mijares,PH,,howardmijares,,Manilla;San Francisco;Singapore,Dubai
-Jan Ove,Moen,NO,janove,janovem,jan-ove-moen-3872888,Molde;Oslo,Molde
-Joel,van Bodegraven,NL,,,,Amsterdam,Amsterdam
-Josephine,Hjort,DK,,josephinehjort,Josephine Hjort,Copenhagen;Melbourne;Sydney,Copenhagen
-Kara,Kane,US,KaraKane_kk,karakane_kk,kara-kane-32957024,New York;London,London
-Katie,Shelly,US,interkatie,interkatie,,New York,Manchester
-Letizia,Lodi,IT,LetiziaLodi,titsola,Letizia Titti Lodi,Bologna;Melbourne ,Manchester
-Lisa,Sibbing,NL,lisasibbing,lisasibbing,lisasibbing,Rotterdam;Amsterdam;Berlin,Berlin
-Mabel,Lazzarin,BR,belxlaz,belxlaz,belxlaz,Florianópolis;London,Bournemouth
-Marcela,Ospina,CO,,marce_lejana,,Colombia;Johannesburg,London
-Marco,Candi,BR,,marcocandi,Marcocandi,Sao Paulo;Israel;Sao Paulo,New York
-Mario,Gabric,AT,,,,,Manchester
-Mathilde,Dongala,FR,,,Lukeidesign,Paris,Berlin 
-Mayra,Kapteyn,NL,,,,Amsterdam,
-Mira,Bordoloi,,momibo,momibo,mbordoloi,Chicago;Portland;St.Louis,
-Mustafa,Gokeri,CY,,mgokeri,,,New York
-Nadine,Kriegelstein ,AT,,,,,
-Natalie,McCarthy,GB,nmccarthy_,nmccarthy_,nataliebethmccarthy,London;Manchester,Manchester;London
-Natasha,McNamara,CA,,,,,London
-Nurul,Ibrahim,IN,raishanurul,raishanurul,Nurul Ibrahim,Jakarta,
-Patrick,Turtchin,BR,,,,Sao Paulo,Sao Paolo
-Radina,Doneva,BG,radinadoneva,rada.rey,radinadoneva,San Francisco,Manchester
-Renzo,Vallejo,PE,renzovallejo,renzovallejo,renzovallejo/en,Lima,
-Roni,Cheung,HK,tweettoroni,piscesroni,,HongKong;Singapore,London
-Sara,Ramos,PT,saranramos,saramnramos,saramnramos/en,Porto,Manchester;London
-Sergio,de Andrade,BR,,,,Sao Paolo,London
-Shirley,Sarker,US,,sarkyou,,,Manchester
-Sofia,Nihlén,SE,,,,,
-Stefan,Jost,CH,_stefanjost,,,Zurich,Zurich
-Susanne,Ljungberg,SE,,,susanneljungberg,Gothenburg;London;Miami;Sydney,Manchester;Stockholm;Amsterdam;Berlin
-Sydney,Johnson,CA,sydneyajohnson,sydneyajohnson,sydneyajohnson,London,Toronto 
-Thomas,Rasmussen,CA,itwarasmussen,itwasrasmussen,thomasboierasmussen,Vancouver,Copenhagen
-Tim,Arlestig,SE,,,Tim Arlestig,Stockholm,London
-Tom,Anderson,UK,ThisIsTomsBlog,,Thomas Anderson,"Cambridge UK, London",London
-Vanessa,Jennings,UK,,,,,Manchester
-Viktor,Olsson,SE,,,,,London
-Yann Merian,Merian,FR,,popekorn,,,Manchester
-Lena,Åsberg,SE,,tjockis_,lenaasberg,Gothenburg,Gothenburg
+first_name,last_name,nationality,twitter,instagram,linkedin,website,IRP_topic,IRP_url,before_hyper,after_hyper
+Aksha,Sachdev,IN,AkshaSachdev,aksha1986,aksha-sachdev,,Exploring the future of Digital Advertising using human-centered problem solving approach,,Mumbai,Mumbai
+Ali,Rome,UK,alison_rome,alisonrome,alisonrome,,The State is my parent - HMW build lasting support solutions for foster care leavers,,Dundee,Manchester
+Anna,Evans,SE,ideskafferiet,ideskafferiet,anna-evans-7977301,,,,Seoul;Halmstad;San Antonio TX;Halmstad;Paris;Lund;Surrey;Gothenburg;Lucerne;London;Stockholm,Stockholm
+Antoine,Ballif,FR,,,,,,,Paris,Paris
+Clara,Aparisi,ES,claraaparisi,claretaab,Clara Aparisi,,,,Valencia; Beijing; London,
+Clara,Parada,BR/IT,,,Maria Clara Parada,,,,São Paulo,"Helsinki, San Francisco; São Paulo"
+Dag Otto,Christensen,NO,dachotto,dagotto,dag-otto-lund-christensen-8169893b,,,,Oslo,London
+Dalma,Kadocsa,HU,,dalmakad,,,,,,
+Dan,Nessler,CH,nessie420,dannessie420,dannessler,,How to design interactions for new and non user interfaces,,Zurich,Zurich
+Daniel,Santos,PT,danieltsantos,danieltsantos,danieltsantos,,How might HCD encourage young citizens to a participatory culture & civic engagement?,,Mumbai,Manchester; Porto; Lisbon; Berlin; Amsterdam; Stockholm; Copenhagen
+Davey,van der Woert,NL,dpwoert,dpwoertNL,dpwoert,http://dpwoert.com,Briding the gap between developers and creatives,https://medium.com/@dpwoert/a9943ab97b14,Eindhoven;Rotterdam;Utrecht,London
+Davis,Levine,CA,davislevine,dlevine90,Davis Levine,,Building service design capacity with BC government civil servants,,Edmonton,Victoria canada
+Dominic,Burr,GB,i_am_dom_burr,jpegjpegjpeg,dominic-burr-b421ab43,,,,London,London
+Emelie,Wänstedt,SE,emeliewa,emelie_wa,emeliewanstedt,,,,Luleå;Tokyo;Örebro;Luleå,Manchester
+Érika,Mendes,BR,,erikarmendes,erikamendes,,How might small and medium companies implement holocracy and what the beneficts are,,Sao Paulo,Manchester
+Gabriel,Negri,BR,gabrielnegri,gabrielnegri,Gabriel Negri,,,,Rio de Janeiro,Munich
+Gabriela,Triffiletti,ES,gabrielatriffi,gabrielatriffiletti,gabrielatriffiletti,,,,Madrid,London
+Howard,Mijares,PH,,howardmijares,,,"How might we enable digital agencies/organizations to effectively learn & apply innovation culture (structure, process & culture) from tech start ups?",,Manilla;San Francisco;Singapore,Dubai
+Jan Ove,Moen,NO,janove,janovem,jan-ove-moen-3872888,,,,Molde;Oslo,Molde
+Joel,van Bodegraven,NL,,,,,Anticipatory Design at TravelBird,,Amsterdam,Amsterdam
+Josephine,Hjort,DK,,josephinehjort,Josephine Hjort,,,,Copenhagen;Melbourne;Sydney,Copenhagen
+Kara,Kane,US,KaraKane_kk,karakane_kk,kara-kane-32957024,,Open innovation and online communities: how online communities can play a role in accelerating new products/services in the public and social sector. ,,New York;London,London
+Katie,Shelly,US,interkatie,interkatie,,,Designing financial services for those who need them most,,New York,Manchester
+Letizia,Lodi,IT,LetiziaLodi,titsola,Letizia Titti Lodi,,,,Bologna;Melbourne ,Manchester
+Lisa,Sibbing,NL,lisasibbing,lisasibbing,lisasibbing,,Brand Urbanism: How might big brands participate in city-making in a meaningful way and create visible value both for citizens and for themselves?,,Rotterdam;Amsterdam;Berlin,Berlin
+Mabel,Lazzarin,BR,belxlaz,belxlaz,belxlaz,,,,Florianópolis;London,Bournemouth
+Marcela,Ospina,CO,,marce_lejana,,,,,Colombia;Johannesburg,London
+Marco,Candi,BR,,marcocandi,Marcocandi,,,,Sao Paulo;Israel;Sao Paulo,New York
+Mario,Gabric,AT,,,,,How might we raise awareness about the air quality in cities by sharing quantitive data in a meaningful way?,,,Manchester
+Mathilde,Dongala,FR,,,Lukeidesign,,,,Paris,Berlin 
+Mayra,Kapteyn,NL,,,,,,,Amsterdam,London
+Mira,Bordoloi,,momibo,momibo,mbordoloi,,,,Chicago;Portland;St.Louis,
+Mustafa,Gokeri,CY,,mgokeri,,,,,,New York
+Nadine,Kriegelstein ,AT,,,,,,,,
+Natalie,McCarthy,GB,nmccarthy_,nmccarthy_,nataliebethmccarthy,,"How might we us design fiction as a tool to explore the social, cultural and ethical implications of technology on organ transplantation",,London;Manchester,Manchester;London
+Natasha,McNamara,CA,,,,,,,,London
+Nurul,Ibrahim,IN,raishanurul,raishanurul,Nurul Ibrahim,,,,Jakarta,
+Patrick,Turtchin,BR,,,,,,,Sao Paulo,Sao Paolo
+Radina,Doneva,BG,radinadoneva,rada.rey,radinadoneva,,,,San Francisco,Manchester
+Renzo,Vallejo,PE,renzovallejo,renzovallejo,renzovallejo/en,,,,Lima,
+Roni,Cheung,HK,tweettoroni,piscesroni,,,,,HongKong;Singapore,London
+Sara,Ramos,PT,saranramos,saramnramos,saramnramos/en,,,,Porto,Manchester;London
+Sergio,de Andrade,BR,,,,,,,Sao Paolo,London
+Shirley,Sarker,US,,sarkyou,,,The Minimal Experience: The future of nonscreen based interactions,,Manchester,Manchester;Seattle
+Sofia,Nihlén,SE,,,,,,,,
+Stefan,Jost,CH,_stefanjost,,,,,,Zurich,Zurich
+Susanne,Ljungberg,SE,,,susanneljungberg,,How might we improve cross-functional team collaboration in digital agencies. ,,Gothenburg;London;Miami;Sydney,Manchester;Stockholm;Amsterdam;Berlin
+Sydney,Johnson,CA,sydneyajohnson,sydneyajohnson,sydneyajohnson,,Gender inequality in leeadership positions of design and/or technology companies. ,,London,Toronto 
+Thomas,Rasmussen,CA,itwarasmussen,itwasrasmussen,thomasboierasmussen,,,,Vancouver,Copenhagen
+Tim,Arlestig,SE,,,Tim Arlestig,,,,Stockholm,Tokyo
+Tom,Anderson,UK,ThisIsTomsBlog,,Thomas Anderson,,,,"Cambridge UK, London",London
+Vanessa,Jennings,UK,,,,,How might we: Create a Digital platform to help career changers assess their skills and prepare for a career change into the digital field.,,,Manchester
+Viktor,Olsson,SE,,,,,,,,London
+Yann Merian,Merian,FR,,popekorn,,,,,,Manchester
+Lena,Åsberg,SE,,tjockis_,lenaasberg,,Reviewing the business model of street magazines,,Gothenburg,Gothenburg

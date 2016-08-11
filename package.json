@@ -52,7 +52,7 @@
     "gulp-useref": "*",
     "imagemin-pngquant": "^4.2.0",
     "lodash": "^4.6.0",
-    "phantomjs": "1.9.8",
+    "nightmare": "^2.6.1",
     "postcss-nested": "^1.0.0",
     "postcss-partial-import": "*",
     "postcss-simple-extend": "^1.0.0",
