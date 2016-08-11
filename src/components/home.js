@@ -31,7 +31,7 @@ export default class Home extends Component {
 	componentDidMount(){
 
 		this.element = ReactDOM.findDOMNode(this);
-		// this.world = new World(this.element);
+		this.world = new World(this.element);
 
 	}
 
